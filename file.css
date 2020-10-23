@@ -1,0 +1,139 @@
+* {
+  -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+        box-sizing: border-box;
+}
+html {
+  color: black;
+  background-color: white;
+  font-family: Courier, monospace;
+  font-size: 12px;
+  padding:0px;
+  margin:0px;
+}
+body {
+  display:flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  margin: 0px;
+  padding: 0px;
+}
+/* ----------------------------main---------------------------- */
+.main {
+  width:100%;
+  flex: 1 0 auto;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 1px;
+  max-width: 100%;
+  margin:0px;
+}
+.columnLeft {
+  flex:15%;
+  max-width:70%; /*this + columnRight max-width = 100%*/
+}
+.columnRight {
+  flex:15%;
+  max-width:30%; /*this + columnLeft max-width = 100%*/
+}
+.columnLeft .left {
+  width:100%;
+  padding:15% 2% 15% 15%; /*top, right, bottom, left*/
+}
+.columnRight .right {
+  width:100%;
+  padding:35% 15% 15% 2%; /*top, right, bottom, left*/
+}
+/* ----------------------------text---------------------------- */
+h1 {
+  width: 100%;
+  padding:0px;
+  margin:0px;
+  font-size:24px;
+}
+h2 {
+  width:100%;
+  padding-top:10px;
+  margin:0px;
+  font-size:20px;
+}
+p {
+  padding-top: 1%;
+  text-align: justify;
+  padding:0px;
+  margin:0px;
+  font-size:16px;
+}
+a {
+  text-decoration: none;
+  color: #c8a2c8;
+}
+.main h1:hover,
+.main h2:hover,
+.main a:hover {
+  color: yellow;
+  text-decoration: underline wavy yellow;
+}
+/* ---------------------------other---------------------------- */
+img {
+    text-align: right;
+    width: 100%;
+}
+/* -----------adjust dimensions based on screen size---------- */
+@media screen and (max-width: 1000px) {
+  h1 {
+    font-size:20px;
+  }
+  h2 {
+    font-size:16px;
+  }
+}
+@media screen and (max-width: 800px) {
+  h1 {
+    font-size:16px;
+  }
+  h2 {
+    font-size:12px;
+  }
+}
+@media screen and (max-width: 630px) {
+  h1 {
+    font-size:12px;
+  }
+  h2 {
+    font-size:10px;
+  }
+  p {
+    font-size:10px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .columnLeft {
+    flex:15%;
+    max-width:60%; /*this + columnRight max-width = 100%*/
+  }
+  .columnRight {
+    flex:15%;
+    max-width:40%; /*this + columnLeft max-width = 100%*/
+  }
+  .columnLeft .left {
+    width:100%;
+    padding:15% 2% 15% 5%; /*top, right, bottom, left*/
+  }
+  .columnRight .right {
+    width:100%;
+    padding:21% 5% 15% 2%; /*top, right, bottom, left*/
+  }
+  h1 {
+    font-size:12px;
+  }
+  h2 {
+    font-size:10px;
+  }
+  p {
+    font-size:10px;
+  }
+}
